@@ -1,0 +1,399 @@
+/* Table of Contents: 
+0. Global: Spacing & Layout
+1. Global: Colours
+2. Global: Text
+3. Global: Interactive Elements
+4. Global: Primary Navigation
+5. Global: Footer
+6. Page: Home
+7. Page: About
+8. Page: Work
+9. Page: Contact 
+10. Page: Animation and color styling*/
+
+/* 0. GLOBAL SPACINGS AND LAYOUT */
+/* Three essentials of the box model: padding, margin, and border */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 1. GLOBAL COLOUR STYLINGS */
+/* CSS variables are defined by adding two dashes (--) to the front of the variable name */
+
+/* 2. GLOBAL TEXT STYLINGS */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+  background-color: white;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* 3. INTERACTIVE ELEMENTS */
+/* How to remove underscore between icons: find me on, github,twitter,linkedin */
+a {
+  text-decoration: none;
+}
+/* Change the default link color to your primary color & remove the text underline when you hover over the link with your mouse */
+/* a:hover MUST come after a:visited in the CSS definition in order to be effective. Likewise, a:active MUST come after a:hover in the CSS definition in order to work */
+/*I like this color: #05676e; */
+
+a {
+  color: #357b70;
+}
+a:visited {
+  color: #05676e;
+}
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+a:active {
+  /* selected link */
+  color: #489c79;
+}
+/* Changing button text to white color */
+a.button {
+  color: white;
+}
+.button {
+  /* overwrites browser defaults */
+  /* resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* style button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+button {
+  /* overwrites browser defaults */
+  /* resets the border */
+  border: none;
+  display: inline-block;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* style button */
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+/* 4. PRIMARY NAVIGATION */
+/* Header including the logo and the main navigation, the class page-header and the class page-header__item (Flexbox layout)*/
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+.page-header__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
+}
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: right;
+}
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+/* You can remove the underlining on the active element of Home, About, Work, Contact: */
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+/* 5. FOOTER */
+/* Give your footer a new class="page-footer", which will enable you to target it in your CSS: */
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /*the group of icons changes to being displayed next to the “Find me on” text */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; /*using this feature the “Find me on” text appear on top of the icon group.*/
+  text-align: center; /*to center the content “Find me on” with icons inside the footer*/
+}
+
+/* 6. HOME PAGE */
+/* We applied the float property left to your img4 and it should be floated to the left */
+/* The CSS property border-radius allows you to add rounded corners to any element. */
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+/* To target entire “box” of div content using div class="profile" */
+/* margin: 10px, you’ll apply the given margin value to all four sides of your element. */
+/* margin: 5px 10px will create top and bottom margins of 5px and left and right margins of 10px */
+/* margin: 0 auto will continuously adjust its left and right margins until the content is centered */
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 7. ABOUT PAGE */
+.profile-resume {
+  max-width: 700px;
+  margin: 23px;
+}
+
+/* 8. WORK PAGE */
+.profile__work {
+  max-width: 930px;
+  margin: auto;
+  text-align: center;
+}
+
+/*Work div class="grid"*/
+.grid__item {
+  background-color: #d8eeea;
+  display: inline-block;
+  padding: 24px;
+  border-radius: 8px;
+  width: auto;
+  min-height: auto;
+  margin: 0;
+}
+/* Not flexible grid layout and without spacing btw the containers 1-6*/
+/* .grid {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px;
+  } */
+
+/* Flexible grid layout with spacing, containers 1-6*/
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 13px 1fr 13px 1fr 13px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 13px;
+}
+/*If you want your last child item to go over two rows*/
+/* .grid__item:last-child {
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+  -ms-grid-column-span: 0;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+} */
+/*If you want your last child item to go over two rows*/
+/* You can also write above code in short-form */
+/* .grid__item:last-child {
+  -ms-grid-column: 3;
+  grid-column: 3 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+} */
+
+/* Responsive Web Pages with Media Queries (@media allow you to specify at which size certain rules should be applied) 
+  Responsive design means designing for ANY screen, including large ones*/
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    -ms-grid-columns: 1fr 13px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 13px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* 9. CONTACT PAGE  */
+/* .profile__address {
+  max-width: 930px;
+  margin: 63px;
+} */
+.profile__address {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 10. ANIMATION and COLOUR STYLINGS PAGE */
+/* Animate the color of the sun: the sun change from yellow to red, then back to yellow */
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+.sun {
+  -webkit-animation: 4s color-change infinite alternate linear;
+  animation: 4s color-change infinite alternate linear;
+}
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
+  }
+}
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
+  }
+}
+/* Animate the color of the sun: the light change from white to yellow, then back to white */
+@-webkit-keyframes color-change-light {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #ffeb17;
+  }
+  100% {
+    fill: #75a6ef;
+  }
+}
+@keyframes color-change-light {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #ffeb17;
+  }
+  100% {
+    fill: #75a6ef;
+  }
+}
+.light {
+  -webkit-animation: 1s color-change-light infinite alternate linear;
+  animation: 1s color-change-light infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+    transform: translate(200px, 50px);
+  }
+}
+.cloud-front {
+  -webkit-animation: 20s cloud-move infinite alternate linear;
+  animation: 20s cloud-move infinite alternate linear;
+}
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
+  }
+}
+@keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+    transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  -webkit-animation: 24s cloud-move-reverse infinite alternate linear;
+  animation: 24s cloud-move-reverse infinite alternate linear;
+}
