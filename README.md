@@ -1,4 +1,4 @@
 # My portfolio website
 
 
-Link: https://vadimishkarin.github.io/my-website-portfolio/
+Link to my website:   https://vadimishkarin.github.io/my-website-portfolio/
