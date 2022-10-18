@@ -1,4 +1,11 @@
 # My portfolio website
 
+# Link
 
-Link to my website:   https://vadimishkarin.github.io/my-website-portfolio/
+https://vadimishkarin.github.io/my-website-portfolio/
+
+## Dependencies:
+
+- HTML
+- CSS
+- JavaScript
