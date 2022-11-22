@@ -296,3 +296,6 @@ button:focus,
   background-color: #357b70;
   color: white;
 }
+.website-image {
+  width: 280px;
+}
