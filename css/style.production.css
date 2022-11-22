@@ -197,6 +197,7 @@ button:focus,
 .profile-resume {
   max-width: 700px;
   margin: 23px;
+  text-align: right;
 }
 
 /* 8. WORK PAGE */
